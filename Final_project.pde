@@ -7,13 +7,16 @@ Adham Nawar
 int score = 0;
 
 String gameState = "HOME";
+PImage sonicClicker;
 
 void setup() {
   size(500, 500);
+  
+  sonicClicker = loadImage("sonicclicker.jpg");
 }
 
 void draw() {
-  background(140, 120, 120);
+  background(65, 105, 225);
 
   // Switch between screens based on the game state
   if (gameState.equals("HOME")) {
@@ -52,11 +55,9 @@ void drawHomeScreen() {
 void drawGameScreen() {
   // Gameplay button
   fill(255);
-  rect(150, 150, 200, 200);
+  //rect(150, 150, 200, 200);
+  image(sonicClicker, 150, 150, 200, 200);
 
-  fill(0);
-  textSize(24);
-  text("Click here", 200, 270);
 
   // Score display
   fill(255);
